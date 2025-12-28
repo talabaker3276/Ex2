@@ -1,0 +1,31 @@
+The code works with a 2D grid where each cell represents a pixel.
+Index2D is used to represent a position in the grid using x and y coordinates.
+Map stores the grid as a 2D array and provides methods to initialize the map, change pixel values, draw shapes, and perform flood fill using BFS.
+Ex2_GUI displays the grid in a pixelized way, follows the mouse with a pink trail, and includes a blocked area in the center.
+The JUnit tests verify the correctness of the map logic, while the GUI is used only for visualization.
+
+Index2D
+Constructor – creates a pixel with x and y coordinates
+getX / getY – return the pixel coordinates
+distance2D – calculates distance between two pixels
+equals / hashCode – compare pixels by position
+
+Map
+init / constructors – create or reset the map
+getMap / getWidth / getHeight – return map data and size
+getPixel / setPixel – read or change a pixel value
+isInside – checks if a pixel is inside the map
+sameDimensions – checks if two maps have the same size
+addMap2D / mul / rescale – modify the map values or size
+drawLine / drawRect / drawCircle – draw shapes on the map
+fill – fills connected pixels using BFS
+shortestPath – finds the shortest path between two pixels
+allDistance – calculates distances from a starting pixel
+equals – checks if two maps are identical
+
+Ex2_GUI
+main – starts the GUI
+pixelMouseWorld – runs the pixelized mouse-follow GUI
+drawCell – draws one pixel on the screen
+inside / inBlock / clamp – helper functions for bounds and limits
+
